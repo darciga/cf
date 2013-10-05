@@ -15,7 +15,7 @@ class subCategoria(models.Model):
 	"""Control de sub Categorias"""
 	categoria 	= ForeignKey(categoria)
 	nombre 		= models.CharField(max_length = 50, verbose_name = 'Nombre')
-	descripcion = models.TextField( verbose_name = 'Descripcion', blank = True, null = True)
+	descripcion = models.TextField(verbose_name = 'Descripcion', blank = True, null = True)
 	slug 		= models.slugField(max_length = 100, default = '', blank = True, null = True)
 	class Meta:
 		verbose_name 		= u'Sub-categoria'
